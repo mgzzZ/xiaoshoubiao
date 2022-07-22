@@ -4,8 +4,10 @@ on:
     branches:
       - master
 jobs:
-  build:
+ build:
     name: Build Web
+    env:
+      my_secret: ${{secrets.xiaoshoubiao_secret}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.1
@@ -17,11 +19,21 @@ jobs:
         run: |
           flutter pub get
           flutter build web --release
-      - name: "Web Deploy 🚀"
-        # https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@4.0.0
-        with:
-          token: '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'
-          branch: gh-pages
-          folder: build/web
+      - run: |
+          cd build/web
+          git init
+          # type configurations: your user.email and user.name followed lines 
+          # git config --global user.email your_email 
+          # git config --global user.name your_name 
+          git config --global user.email zgm_ios@163.com
+          git config --global user.name mgzzZ
+          git status
+          # change this remote url for examle your remote url is https://github.com/onatcipli/flutter_web.git then the following:
+          git remote add origin https://${{secrets.xiaoshoubiao_secret}}@github.com/mgzzZ/xiaoshoubiao.git
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "update"
+          git push origin gh-pages -f
+
+          
 
