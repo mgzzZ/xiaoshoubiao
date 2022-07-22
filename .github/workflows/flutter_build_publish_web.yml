@@ -18,7 +18,7 @@ jobs:
       - name: "Web Build 🔧"
         run: |
           flutter pub get
-          flutter build web --release --web-renderer html
+          flutter build web 
       - uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB1_TOKEN }}
