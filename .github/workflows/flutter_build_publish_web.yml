@@ -10,7 +10,7 @@ jobs:
       my_secret: ${{secrets.GITHUB1_TOKEN}}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.1
+      - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '3.0.1'
@@ -18,7 +18,7 @@ jobs:
       - name: "Web Build 🔧"
         run: |
           flutter pub get
-          flutter build web 
+          flutter build web --web-renderer html --release --base-href="/superpacecalcweb/"
       - uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB1_TOKEN }}
