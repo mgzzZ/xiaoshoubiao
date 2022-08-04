@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:xiaoshoubiao/pages/home.dart';
+import 'package:xiaoshoubiao/feature/home/pages/home.dart';
 
 ///
 /// Created by zgm on 2022/7/25
