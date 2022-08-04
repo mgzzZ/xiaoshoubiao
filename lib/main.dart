@@ -133,21 +133,18 @@ class LeftDrawer extends StatelessWidget {
       default:
     }
 
-    return AnimatedSize(
-      duration: Duration(milliseconds: 200),
-      curve: Curves.ease,
+    return Container(
+      width: width,
+      height: double.infinity,
+      color: Colors.blue,
       child: Container(
-        width: width,
-        height: double.infinity,
-        color: Colors.blue,
-        child: Container(
-          height: 100,
-          child: Row(
-            children: [
-              const Icon(Icons.access_time_filled_outlined),
-              if (ScreenType.max == type) ...[Text('左边栏')],
-            ],
-          ),
+        height: 100,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.access_time_filled_outlined),
+            if (ScreenType.max == type) ...[Text('左边栏')],
+          ],
         ),
       ),
     );
