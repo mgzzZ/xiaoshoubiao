@@ -1,16 +1,23 @@
-# xiaoshoubiao
+# 小手表
 
-A new Flutter project.
+为什么叫小手表呢?
 
-## Getting Started
+当然对于人类来讲,时间是不可逆的.也是最宝贵的.所以要珍惜每分每秒.
 
-This project is a starting point for a Flutter application.
+做事有计划,要动脑,要减负,要有工具.
 
-A few resources to get you started if this is your first Flutter project:
+## 主要功能:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [ ] 序列化工具
+- [ ] 时间工具
+- [ ] 待办事项
+- [ ] 日程提醒
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 技术栈:
+Flutter 
+
+## dev pubs:
+1. get
+2. getwidget
+3. freezed_annotation
+4. json_annotation
